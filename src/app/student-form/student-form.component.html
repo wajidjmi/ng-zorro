@@ -1,0 +1,50 @@
+<router-outlet></router-outlet>
+<p>i m wajid</p>
+
+<form [formGroup]="studentform" ngSubmit="onSubmit()">
+  <p>
+    <label>first Name</label>
+    <input type="text" formControl="firstName" required>
+  </p>
+  <p>
+    <label>last Name</label>
+    <input type="text" formControl="lastName" required>
+  </p>
+  <p>
+    <label>class</label>
+    <input type="text" class="firstName" required>
+  </p>
+  <p>
+    <label>mobile number</label>
+    <input type="number" class="mobile" required>
+  </p>
+  <p>
+    <label>email id</label>
+    <input type="text" class="email" required>
+  </p>
+  <p>
+    <label>age of student</label>
+    <input type="text" class="age" required>
+  </p>
+  <div formGroupName="address">
+    <h2>Address</h2>
+    <p>
+      <label>street</label>
+      <input type="text" formControlName="street" required>
+    </p>
+    <p>
+      <label>city name</label>
+      <input type="text" formControlName="city" required>
+    </p>
+    <p>
+      <label>state name</label>
+      <input type="text" formControlName="state" required>
+    </p>
+  </div>
+  <p>
+    <label>&nbsp;</label>
+    <button type="submit" [disabled]="!studentform.valid">submit</button>
+  </p>
+
+
+</form>
