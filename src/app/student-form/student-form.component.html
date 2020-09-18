@@ -4,7 +4,7 @@
 <form [formGroup]="studentform" ngSubmit="onSubmit()">
   <p>
     <label>first Name</label>
-    <input type="text" formControl="firstName" required>
+    <input type="text" formControl="firstName" value={{name}} required>
   </p>
   <p>
     <label>last Name</label>
